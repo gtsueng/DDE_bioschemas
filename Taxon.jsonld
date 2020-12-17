@@ -3,11 +3,11 @@
     "schema": "http://schema.org/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "bioschemas_test": "http://discovery.biothings.io/view/"
+    "bioschemas": "http://discovery.biothings.io/view/"
   },
   "@graph": [
     {
-      "@id": "bioschemas_test:Taxon",
+      "@id": "bioschemas:Taxon",
       "@type": "rdfs:Class",
       "rdfs:comment": "A set of organisms asserted to represent a natural cohesive biological unit.",
       "rdfs:label": "Taxon",
@@ -22,7 +22,7 @@
             "description": "Closest child taxa of the taxon in question. Inverse property: parentTaxon"
           },
           "hasDefinedTerm": {
-            "description": "A Defined Term contained in this term set."
+            "description": "A Defined Term contained in this term set. "
           },
           "parentTaxon": {
             "description": "Closest parent taxon of the taxon in question. Inverse property: childTaxon"
@@ -35,16 +35,16 @@
       }
     },
     {
-      "@id": "bioschemas_test:childTaxon",
+      "@id": "bioschemas:childTaxon",
       "@type": "rdfs:Property",
       "rdfs:comment": "Closest child taxa of the taxon in question. Inverse property: parentTaxon",
       "rdfs:label": "childTaxon",
       "schema:domainIncludes": {
-        "@id": "bioschemas_test:Taxon"
+        "@id": "bioschemas:Taxon"
       },
       "schema:rangeIncludes": [
         {
-          "@id": "bioschemas_test:Taxon"
+          "@id": "bioschemas:Taxon"
         },
         {
           "@id": "schema:Text"
@@ -55,12 +55,12 @@
       ]
     },
     {
-      "@id": "bioschemas_test:hasDefinedTerm",
+      "@id": "bioschemas:hasDefinedTerm",
       "@type": "rdfs:Property",
-      "rdfs:comment": "A Defined Term contained in this term set.",
+      "rdfs:comment": "A Defined Term contained in this term set. ",
       "rdfs:label": "hasDefinedTerm",
       "schema:domainIncludes": {
-        "@id": "bioschemas_test:Taxon"
+        "@id": "bioschemas:Taxon"
       },
       "schema:rangeIncludes": [
         {
@@ -69,16 +69,16 @@
       ]
     },
     {
-      "@id": "bioschemas_test:parentTaxon",
+      "@id": "bioschemas:parentTaxon",
       "@type": "rdfs:Property",
       "rdfs:comment": "Closest parent taxon of the taxon in question. Inverse property: childTaxon",
       "rdfs:label": "parentTaxon",
       "schema:domainIncludes": {
-        "@id": "bioschemas_test:Taxon"
+        "@id": "bioschemas:Taxon"
       },
       "schema:rangeIncludes": [
         {
-          "@id": "bioschemas_test:Taxon"
+          "@id": "bioschemas:Taxon"
         },
         {
           "@id": "schema:Text"
@@ -89,12 +89,12 @@
       ]
     },
     {
-      "@id": "bioschemas_test:taxonRank",
+      "@id": "bioschemas:taxonRank",
       "@type": "rdfs:Property",
       "rdfs:comment": "The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary \u2013 (typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs).",
       "rdfs:label": "taxonRank",
       "schema:domainIncludes": {
-        "@id": "bioschemas_test:Taxon"
+        "@id": "bioschemas:Taxon"
       },
       "schema:rangeIncludes": [
         {

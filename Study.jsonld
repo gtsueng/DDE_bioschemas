@@ -1,0 +1,72 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschema_test": "http://discovery.biothings.io/view/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschema_test:Study",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Re-created schema of the Bioschemas draft schema: Study",
+      "rdfs:label": "Study",
+      "rdfs:subClassOf": {
+        "@id": "schema:CreativeWork"
+      },
+      "$validation": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "studyDomain": {
+            "description": "Define the domain of the study. For example, the domain could be astrophysics, functional genomics or earth science. Those domains can also have an ontology reference."
+          },
+          "studyProcess": {
+            "description": "A process performed as part of an experiment or wider study, i.e. intentionally designed. These processes can have ontology URL attached to."
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "@id": "bioschema_test:studyDomain",
+      "@type": "rdfs:Property",
+      "rdfs:comment": "Define the domain of the study. For example, the domain could be astrophysics, functional genomics or earth science. Those domains can also have an ontology reference.",
+      "rdfs:label": "studyDomain",
+      "schema:domainIncludes": {
+        "@id": "bioschema_test:Study"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:PropertyValue"
+        },
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "bioschema_test:studyProcess",
+      "@type": "rdfs:Property",
+      "rdfs:comment": "A process performed as part of an experiment or wider study, i.e. intentionally designed. These processes can have ontology URL attached to.",
+      "rdfs:label": "studyProcess",
+      "schema:domainIncludes": {
+        "@id": "bioschema_test:Study"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:PropertyValue"
+        },
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    }
+  ]
+}

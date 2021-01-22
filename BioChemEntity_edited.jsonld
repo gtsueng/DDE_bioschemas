@@ -8,10 +8,10 @@
   "@graph": [
     {
       "@id": "bioschema:BioChemEntity",
-      "@type": "rdf:Class",
-      "rdf:comment": "Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical.",
-      "rdf:label": "BioChemEntity",
-      "rdf:subClassOf": {
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical.",
+      "rdfs:label": "BioChemEntity",
+      "rdfs:subClassOf": {
         "@id": "schema:Thing"
       },
       "$validation": {
@@ -61,8 +61,8 @@
     {
       "@id": "bioschema:associatedDisease",
       "@type": "rdf:Property",
-      "rdf:comment": "Disease associated to this BioChemEntity. Such a disease can be a MedicalCondition or a URL. If you want to add an evidence supporting the association, please use PropertyValue.",
-      "rdf:label": "associatedDisease",
+      "rdfs:comment": "Disease associated to this BioChemEntity. Such a disease can be a MedicalCondition or a URL. If you want to add an evidence supporting the association, please use PropertyValue.",
+      "rdfs:label": "associatedDisease",
       "schema:domainIncludes": {
         "@id": "bioschema:BioChemEntity"
       },
@@ -81,8 +81,8 @@
     {
       "@id": "bioschema:bioChemInteraction",
       "@type": "rdf:Property",
-      "rdf:comment": "A BioChemEntity that is know to interact with this item.",
-      "rdf:label": "bioChemInteraction",
+      "rdfs:comment": "A BioChemEntity that is know to interact with this item.",
+      "rdfs:label": "bioChemInteraction",
       "schema:domainIncludes": {
         "@id": "bioschema:BioChemEntity"
       },
@@ -95,8 +95,8 @@
     {
       "@id": "bioschema:bioChemSimilarity",
       "@type": "rdf:Property",
-      "rdf:comment": "A similar molecular entity, e.g., obtained by fingerprint similarity algorithm.",
-      "rdf:label": "bioChemSimilarity",
+      "rdfs:comment": "A similar molecular entity, e.g., obtained by fingerprint similarity algorithm.",
+      "rdfs:label": "bioChemSimilarity",
       "schema:domainIncludes": {
         "@id": "bioschema:BioChemEntity"
       },
@@ -109,8 +109,8 @@
     {
       "@id": "bioschema:biogicalRole",
       "@type": "rdf:Property",
-      "rdf:comment": "A role played by the molecular entity within a biological context.",
-      "rdf:label": "biogicalRole",
+      "rdfs:comment": "A role played by the molecular entity within a biological context.",
+      "rdfs:label": "biogicalRole",
       "schema:domainIncludes": {
         "@id": "bioschema:BioChemEntity"
       },
@@ -123,8 +123,8 @@
     {
       "@id": "bioschema:hasBioChemEntityPart",
       "@type": "rdf:Property",
-      "rdf:comment": "Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part. Inverse property: isPartOfBioChemEntity",
-      "rdf:label": "hasBioChemEntityPart",
+      "rdfs:comment": "Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part. Inverse property: isPartOfBioChemEntity",
+      "rdfs:label": "hasBioChemEntityPart",
       "schema:domainIncludes": {
         "@id": "bioschema:BioChemEntity"
       },
@@ -137,8 +137,8 @@
     {
       "@id": "bioschema:hasMolecularFunction",
       "@type": "rdf:Property",
-      "rdf:comment": "Molecular function performed by this BioChemEntity; please use PropertyValue if you want to include any evidence.",
-      "rdf:label": "hasMolecularFunction",
+      "rdfs:comment": "Molecular function performed by this BioChemEntity; please use PropertyValue if you want to include any evidence.",
+      "rdfs:label": "hasMolecularFunction",
       "schema:domainIncludes": {
         "@id": "bioschema:BioChemEntity"
       },
@@ -157,8 +157,8 @@
     {
       "@id": "bioschema:hasRepresentation",
       "@type": "rdf:Property",
-      "rdf:comment": "A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.",
-      "rdf:label": "hasRepresentation",
+      "rdfs:comment": "A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.",
+      "rdfs:label": "hasRepresentation",
       "schema:domainIncludes": {
         "@id": "bioschema:BioChemEntity"
       },
@@ -171,8 +171,8 @@
     {
       "@id": "bioschema:isEncodedByBioChemEntity",
       "@type": "rdf:Property",
-      "rdf:comment": "Another BioChemEntity encoding this one. Inverse property: encodesBioChemEntity.",
-      "rdf:label": "isEncodedByBioChemEntity",
+      "rdfs:comment": "Another BioChemEntity encoding this one. Inverse property: encodesBioChemEntity.",
+      "rdfs:label": "isEncodedByBioChemEntity",
       "schema:domainIncludes": {
         "@id": "bioschema:BioChemEntity"
       },
@@ -185,8 +185,8 @@
     {
       "@id": "bioschema:isInvolvedInBiologicalProcess",
       "@type": "rdf:Property",
-      "rdf:comment": "Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.",
-      "rdf:label": "isInvolvedInBiologicalProcess",
+      "rdfs:comment": "Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.",
+      "rdfs:label": "isInvolvedInBiologicalProcess",
       "schema:domainIncludes": {
         "@id": "bioschema:BioChemEntity"
       },
@@ -205,8 +205,8 @@
     {
       "@id": "bioschema:isLocatedInSubcellularLocation",
       "@type": "rdf:Property",
-      "rdf:comment": "Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.",
-      "rdf:label": "isLocatedInSubcellularLocation",
+      "rdfs:comment": "Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.",
+      "rdfs:label": "isLocatedInSubcellularLocation",
       "schema:domainIncludes": {
         "@id": "bioschema:BioChemEntity"
       },
@@ -225,8 +225,8 @@
     {
       "@id": "bioschema:isPartOfBioChemEntity",
       "@type": "rdf:Property",
-      "rdf:comment": "Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. Inverse property: hasBioChemEntityPart",
-      "rdf:label": "isPartOfBioChemEntity",
+      "rdfs:comment": "Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. Inverse property: hasBioChemEntityPart",
+      "rdfs:label": "isPartOfBioChemEntity",
       "schema:domainIncludes": {
         "@id": "bioschema:BioChemEntity"
       },
@@ -239,8 +239,8 @@
     {
       "@id": "bioschema:taxonomicRange",
       "@type": "rdf:Property",
-      "rdf:comment": "The taxonomic grouping of the organism that expresses, encodes, or in someway related to the BioChemEntity.",
-      "rdf:label": "taxonomicRange",
+      "rdfs:comment": "The taxonomic grouping of the organism that expresses, encodes, or in someway related to the BioChemEntity.",
+      "rdfs:label": "taxonomicRange",
       "schema:domainIncludes": {
         "@id": "bioschema:BioChemEntity"
       },

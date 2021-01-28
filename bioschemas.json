@@ -36,7 +36,7 @@
     },
     {
       "@id": "bioschemas:childTaxon",
-      "@type": "rdfs:Property",
+      "@type": "rdf:Property",
       "rdfs:comment": "Closest child taxa of the taxon in question. Inverse property: parentTaxon",
       "rdfs:label": "childTaxon",
       "schema:domainIncludes": {
@@ -56,7 +56,7 @@
     },
     {
       "@id": "bioschemas:hasDefinedTerm",
-      "@type": "rdfs:Property",
+      "@type": "rdf:Property",
       "rdfs:comment": "A Defined Term contained in this term set. ",
       "rdfs:label": "hasDefinedTerm",
       "schema:domainIncludes": {
@@ -70,7 +70,7 @@
     },
     {
       "@id": "bioschemas:parentTaxon",
-      "@type": "rdfs:Property",
+      "@type": "rdf:Property",
       "rdfs:comment": "Closest parent taxon of the taxon in question. Inverse property: childTaxon",
       "rdfs:label": "parentTaxon",
       "schema:domainIncludes": {
@@ -90,7 +90,7 @@
     },
     {
       "@id": "bioschemas:taxonRank",
-      "@type": "rdfs:Property",
+      "@type": "rdf:Property",
       "rdfs:comment": "The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary \u2013 (typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs).",
       "rdfs:label": "taxonRank",
       "schema:domainIncludes": {
@@ -162,7 +162,7 @@
     },
     {
       "@id": "bioschemas:associatedDisease",
-      "@type": "rdfs:Property",
+      "@type": "rdf:Property",
       "rdfs:comment": "Disease associated to this BioChemEntity. Such a disease can be a MedicalCondition or a URL. If you want to add an evidence supporting the association, please use PropertyValue.",
       "rdfs:label": "associatedDisease",
       "schema:domainIncludes": {
@@ -182,7 +182,7 @@
     },
     {
       "@id": "bioschemas:bioChemInteraction",
-      "@type": "rdfs:Property",
+      "@type": "rdf:Property",
       "rdfs:comment": "A BioChemEntity that is know to interact with this item.",
       "rdfs:label": "bioChemInteraction",
       "schema:domainIncludes": {
@@ -196,7 +196,7 @@
     },
     {
       "@id": "bioschemas:bioChemSimilarity",
-      "@type": "rdfs:Property",
+      "@type": "rdf:Property",
       "rdfs:comment": "A similar molecular entity, e.g., obtained by fingerprint similarity algorithm.",
       "rdfs:label": "bioChemSimilarity",
       "schema:domainIncludes": {
@@ -210,7 +210,7 @@
     },
     {
       "@id": "bioschemas:biogicalRole",
-      "@type": "rdfs:Property",
+      "@type": "rdf:Property",
       "rdfs:comment": "A role played by the molecular entity within a biological context.",
       "rdfs:label": "biogicalRole",
       "schema:domainIncludes": {
@@ -224,7 +224,7 @@
     },
     {
       "@id": "bioschemas:hasBioChemEntityPart",
-      "@type": "rdfs:Property",
+      "@type": "rdf:Property",
       "rdfs:comment": "Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part. Inverse property: isPartOfBioChemEntity",
       "rdfs:label": "hasBioChemEntityPart",
       "schema:domainIncludes": {
@@ -238,7 +238,7 @@
     },
     {
       "@id": "bioschemas:hasMolecularFunction",
-      "@type": "rdfs:Property",
+      "@type": "rdf:Property",
       "rdfs:comment": "Molecular function performed by this BioChemEntity; please use PropertyValue if you want to include any evidence.",
       "rdfs:label": "hasMolecularFunction",
       "schema:domainIncludes": {
@@ -258,7 +258,7 @@
     },
     {
       "@id": "bioschemas:hasRepresentation",
-      "@type": "rdfs:Property",
+      "@type": "rdf:Property",
       "rdfs:comment": "A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.",
       "rdfs:label": "hasRepresentation",
       "schema:domainIncludes": {
@@ -272,7 +272,7 @@
     },
     {
       "@id": "bioschemas:isEncodedByBioChemEntity",
-      "@type": "rdfs:Property",
+      "@type": "rdf:Property",
       "rdfs:comment": "Another BioChemEntity encoding this one. Inverse property: encodesBioChemEntity.",
       "rdfs:label": "isEncodedByBioChemEntity",
       "schema:domainIncludes": {
@@ -286,7 +286,7 @@
     },
     {
       "@id": "bioschemas:isInvolvedInBiologicalProcess",
-      "@type": "rdfs:Property",
+      "@type": "rdf:Property",
       "rdfs:comment": "Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.",
       "rdfs:label": "isInvolvedInBiologicalProcess",
       "schema:domainIncludes": {
@@ -306,7 +306,7 @@
     },
     {
       "@id": "bioschemas:isLocatedInSubcellularLocation",
-      "@type": "rdfs:Property",
+      "@type": "rdf:Property",
       "rdfs:comment": "Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.",
       "rdfs:label": "isLocatedInSubcellularLocation",
       "schema:domainIncludes": {
@@ -326,7 +326,7 @@
     },
     {
       "@id": "bioschemas:isPartOfBioChemEntity",
-      "@type": "rdfs:Property",
+      "@type": "rdf:Property",
       "rdfs:comment": "Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. Inverse property: hasBioChemEntityPart",
       "rdfs:label": "isPartOfBioChemEntity",
       "schema:domainIncludes": {
@@ -340,7 +340,7 @@
     },
     {
       "@id": "bioschemas:taxonomicRange",
-      "@type": "rdfs:Property",
+      "@type": "rdf:Property",
       "rdfs:comment": "The taxonomic grouping of the organism that expresses, encodes, or in someway related to the BioChemEntity.",
       "rdfs:label": "taxonomicRange",
       "schema:domainIncludes": {

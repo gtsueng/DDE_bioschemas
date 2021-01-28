@@ -37,11 +37,47 @@
             ]
           },
           "hasDefinedTerm": {
-            "description": "A Defined Term contained in this term set.",
+            "description": " \tA Defined Term contained in this term set.",
             "@type": "DefinedTerm",
             "type": "object",
             "properties": {},
             "required": []
+          },
+          "parentTaxon": {
+            "description": "Closest parent taxon of the taxon in question. Inverse property: childTaxon",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "@type": "bioschema:Taxon",
+                "type": "object",
+                "properties": {},
+                "required": []
+              }
+            ]
+          },
+          "taxonRank": {
+            "description": "The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary \u2013 (typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs). ",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "@type": "PropertyValue",
+                "type": "object",
+                "properties": {},
+                "required": []
+              }
+            ]
           }
         },
         "required": []
@@ -70,7 +106,7 @@
     {
       "@id": "bioschema:hasDefinedTerm",
       "@type": "rdf:Property",
-      "rdfs:comment": "A Defined Term contained in this term set.",
+      "rdfs:comment": " \tA Defined Term contained in this term set.",
       "rdfs:label": "hasDefinedTerm",
       "schema:domainIncludes": {
         "@id": "bioschema:Taxon"
@@ -78,6 +114,46 @@
       "schema:rangeIncludes": [
         {
           "@id": "schema:DefinedTerm"
+        }
+      ]
+    },
+    {
+      "@id": "bioschema:parentTaxon",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Closest parent taxon of the taxon in question. Inverse property: childTaxon",
+      "rdfs:label": "parentTaxon",
+      "schema:domainIncludes": {
+        "@id": "bioschema:Taxon"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "bioschema:Taxon"
+        },
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "bioschema:taxonRank",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary \u2013 (typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs). ",
+      "rdfs:label": "taxonRank",
+      "schema:domainIncludes": {
+        "@id": "bioschema:Taxon"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:PropertyValue"
+        },
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
         }
       ]
     }

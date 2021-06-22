@@ -3,11 +3,11 @@
     "schema": "http://schema.org/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "bioschematemp": "http://discovery.biothings.io/view/bioschematemp/"
+    "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
   },
   "@graph": [
     {
-      "@id": "bioschematemp:Gene",
+      "@id": "bioschemas:Gene",
       "@type": "rdfs:Class",
       "rdfs:comment": "This Gene profile specification presents the markup for describing a Gene and is based on the 1.0 release",
       "rdfs:label": "Gene",
@@ -551,12 +551,12 @@
       }
     },
     {
-      "@id": "bioschematemp:encodesBioChemEntity",
+      "@id": "bioschemas:encodesBioChemEntity",
       "@type": "rdf:Property",
       "rdfs:comment": "Schema:  This property is used to link to gene products encoded (even indirectly) from this gene such as RNA or proteins.  Bioschemas:  For genes, this property is used to express in a generic way gene products encoded by this gene, for instance RNA or Protein",
       "rdfs:label": "encodesBioChemEntity",
       "schema:domainIncludes": {
-        "@id": "bioschematemp:Gene"
+        "@id": "bioschemas:Gene"
       },
       "schema:rangeIncludes": [
         {
@@ -565,12 +565,12 @@
       ]
     },
     {
-      "@id": "bioschematemp:alternativeOf",
+      "@id": "bioschemas:alternativeOf",
       "@type": "rdf:Property",
       "rdfs:comment": "Bioschemas:  Is variant of. Use this property to express when a gene is a variant of any other gene.",
       "rdfs:label": "alternativeOf",
       "schema:domainIncludes": {
-        "@id": "bioschematemp:Gene"
+        "@id": "bioschemas:Gene"
       },
       "schema:rangeIncludes": [
         {
@@ -579,12 +579,12 @@
       ]
     },
     {
-      "@id": "bioschematemp:expressedIn",
+      "@id": "bioschemas:expressedIn",
       "@type": "rdf:Property",
       "rdfs:comment": "Schema:  Tissue, organ, biological sample, etc in which activity of this gene has been observed experimentally. For example brain, digestive system.",
       "rdfs:label": "expressedIn",
       "schema:domainIncludes": {
-        "@id": "bioschematemp:Gene"
+        "@id": "bioschemas:Gene"
       },
       "schema:rangeIncludes": [
         {
@@ -602,12 +602,12 @@
       ]
     },
     {
-      "@id": "bioschematemp:hasBioPolymerSequence",
+      "@id": "bioschemas:hasBioPolymerSequence",
       "@type": "rdf:Property",
       "rdfs:comment": "Schema:  A symbolic representation of a BioChemEnity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a Protein.",
       "rdfs:label": "hasBioPolymerSequence",
       "schema:domainIncludes": {
-        "@id": "bioschematemp:Gene"
+        "@id": "bioschemas:Gene"
       },
       "schema:rangeIncludes": [
         {
@@ -616,12 +616,12 @@
       ]
     },
     {
-      "@id": "bioschematemp:hasStatus",
+      "@id": "bioschemas:hasStatus",
       "@type": "rdf:Property",
       "rdfs:comment": "Schema:  One of pseudogene, dead, killed, live, predicted, suppressed.",
       "rdfs:label": "hasStatus",
       "schema:domainIncludes": {
-        "@id": "bioschematemp:Gene"
+        "@id": "bioschemas:Gene"
       },
       "schema:rangeIncludes": [
         {

@@ -3,14 +3,14 @@
     "schema": "http://schema.org/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "bioschemastemp": "http://discovery.biothings.io/view/bioschemastemp/"
+    "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
   },
   "@graph": [
     {
-      "@id": "bioschemastemp:TaxonFix",
+      "@id": "bioschemas:Taxon",
       "@type": "rdfs:Class",
       "rdfs:comment": "Bioschemas profile for describing a biological taxon. This profile aims to denote a taxon by common properties such as its scientific name, taxonomic rank and vernacular names. It is also a means to link to existing taxonomic registers where each taxon has a URI. Based on version 0.7",
-      "rdfs:label": "TaxonFix",
+      "rdfs:label": "Taxon",
       "rdfs:subClassOf": {
         "@id": "bioschemas:Taxon"
       },
@@ -135,7 +135,7 @@
             ]
           },
           "additionalType": {
-            "description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+            "description": "A Taxon type from a well known vocabulary, e.g. DarwinCore http://rs.tdwg.org/dwc/terms/Taxon or http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept.",
             "oneOf": [
               {
                 "type": "string",
@@ -151,7 +151,7 @@
             ]
           },
           "alternateName": {
-            "description": "An alias for the item.",
+            "description": "Scientific name, with authorship and date information if known, of a synonym of the currently valid (zoological) or accepted (botanical) name.",
             "oneOf": [
               {
                 "type": "string"
@@ -165,11 +165,11 @@
             ]
           },
           "name": {
-            "description": "The name of the item.",
+            "description": "Currently valid (zoological) or accepted (botanical) name for that taxon, with authorship and date information if known.",
             "type": "string"
           },
           "sameAs": {
-            "description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+            "description": "URL of third-party webpages describing the same taxon",
             "oneOf": [
               {
                 "type": "string",
@@ -193,16 +193,78 @@
         "required": [
           "taxonRank",
           "name"
-        ]
+        ],
+        "definitions":{
+            "taxon": {
+                "@type": "bioschemas:Taxon",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "taxonRank": {
+                    "anyOf": [
+                                  {
+                                    "$ref": "#/definitions/propertyValue"
+                                  },
+                                  {
+                                    "type": "array",
+                                    "items": {
+                                      "$ref": "#/definitions/propertyValue"
+                                    }
+                                  },
+                                  {
+                                    "type": "string"
+                                  },
+                                  {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  {
+                                    "type": "string",
+                                    "format": "uri"
+                                  },
+                                  {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "string",
+                                      "format": "uri"
+                                    }
+                                  }
+                                ]
+                  }
+                },
+                "required": [
+                  "name",
+                  "taxonRank"
+                ]   
+            },
+            "propertyValue": {
+                "@type": "PropertyValue",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"    
+                  }
+                },
+                "required": [
+                ]  
+            }
+        }
       }
     },
     {
-      "@id": "bioschemastemp:vernacularName",
+      "@id": "bioschemas:vernacularName",
       "@type": "rdf:Property",
       "rdfs:comment": "A vernacular (common) name of the taxon",
       "rdfs:label": "vernacularName",
       "schema:domainIncludes": {
-        "@id": "bioschemastemp:TaxonFix"
+        "@id": "bioschemas:Taxon"
       },
       "schema:rangeIncludes": [
         {

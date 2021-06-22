@@ -331,7 +331,7 @@
           "@id": "schema:Text"
         }
       ]
-    }
+    },
     {
       "@id": "bioschemas:BioChemEntity",
       "@type": "rdfs:Class",

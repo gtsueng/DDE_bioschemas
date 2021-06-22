@@ -2519,7 +2519,7 @@
       ]
     },
     {
-      "@id": "bioschemastemp:Dna",
+      "@id": "bioschemas:Dna",
       "@type": "rdfs:Class",
       "rdfs:comment": "Bioschemas DNA draft version 0.2",
       "rdfs:label": "Dna",
@@ -2553,7 +2553,7 @@
       }
     },
     {
-      "@id": "bioschemastemp:encodesBioChemEntity",
+      "@id": "bioschemas:encodesBioChemEntity",
       "@type": "rdf:Property",
       "rdfs:comment": "Another BioChemEntity encoded by this one. Inverse property: isEncodedByBioChemEntity.",
       "rdfs:label": "encodesBioChemEntity",

@@ -1895,7 +1895,7 @@
     {
       "@id": "bioschemas:Gene",
       "@type": "rdfs:Class",
-      "rdfs:comment": "This Gene profile specification presents the markup for describing a Gene and is based on the 1.0 release",
+      "rdfs:comment": "Bioschemas profile describing a Gene in Life Sciences. This Gene profile specification presents the markup for describing a Gene and is based on the 1.0 release",
       "rdfs:label": "Gene",
       "rdfs:subClassOf": {
         "@id": "bioschemas:BioChemEntity"
@@ -2182,6 +2182,9 @@
           "identifier": {
             "description": "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details.",
             "oneOf": [
+              {
+                "$ref": "#/definitions/propertyValue"
+              },
               {
                 "type": "string"
               },
@@ -2514,6 +2517,112 @@
           "@id": "schema:Text"
         }
       ]
+    },
+    {
+      "@id": "bioschemastemp:Dna",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Bioschemas DNA draft version 0.2",
+      "rdfs:label": "Dna",
+      "rdfs:subClassOf": {
+        "@id": "bioschemas:BioChemEntity"
+      },
+      "$validation": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "encodesBioChemEntity": {
+            "description": "Another BioChemEntity encoded by this one. Inverse property: isEncodedByBioChemEntity.",
+            "oneOf": [
+              {
+                "$ref": "#/definitions/bioChemEntity"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/bioChemEntity"
+                }
+              }
+            ]
+          },
+          "hasSequence": {
+            "description": "Nucleotide or amino acid sequence.",
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "@id": "bioschemastemp:encodesBioChemEntity",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Another BioChemEntity encoded by this one. Inverse property: isEncodedByBioChemEntity.",
+      "rdfs:label": "encodesBioChemEntity",
+      "schema:domainIncludes": [
+        {
+          "@id": "bioschemas:Dna"
+        },
+        {
+          "@id": "bioschemas:Rna"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "bioschemas:BioChemEntity"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:hasSequence",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Nucleotide or amino acid sequence.",
+      "rdfs:label": "hasSequence",
+      "schema:domainIncludes": [
+        {
+          "@id": "bioschemas:Dna"
+        },
+        {
+          "@id": "bioschemas:Rna"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:Rna",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Bioschemas RNA draft version 0.2",
+      "rdfs:label": "Rna",
+      "rdfs:subClassOf": {
+        "@id": "bioschemas:BioChemEntity"
+      },
+      "$validation": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "encodesBioChemEntity": {
+            "description": "Another BioChemEntity encoded by this one. Inverse property: isEncodedByBioChemEntity.",
+            "oneOf": [
+              {
+                "$ref": "#/definitions/bioChemEntity"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/bioChemEntity"
+                }
+              }
+            ]
+          },
+          "hasSequence": {
+            "description": "Nucleotide or amino acid sequence.",
+            "type": "string"
+          }
+        },
+        "required": []
+      }
     }
   ]
 }

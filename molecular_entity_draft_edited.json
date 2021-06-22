@@ -3,11 +3,11 @@
     "schema": "http://schema.org/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "bioschemastemp": "http://discovery.biothings.io/view/bioschemastemp/"
+    "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
   },
   "@graph": [
     {
-      "@id": "bioschemastemp:MolecularEntity",
+      "@id": "bioschemas:MolecularEntity",
       "@type": "rdfs:Class",
       "rdfs:comment": "Bioschemas profile describing a MolecularEntity. Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity. (Source: ChEBI:23367) based on version 0.5",
       "rdfs:label": "MolecularEntity",
@@ -528,16 +528,165 @@
           "identifier",
           "name",
           "url"
-        ]
+        ],
+        "definitions":{
+          "taxon": {
+            "@type": "bioschemas:Taxon",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "taxonRank": {
+                "anyOf": [
+                  {
+                    "$ref": "#/definitions/propertyValue"
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/definitions/propertyValue"
+                    }
+                  },
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "uri"
+                    }
+                  }
+                ]
+              }
+            },
+            "required": [
+              "name",
+              "taxonRank"
+            ]   
+            },
+          "propertyValue": {
+            "@type": "PropertyValue",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"    
+              }
+            },
+            "required": [
+            ]  
+          },
+          "definedTerm": {
+            "@type": "DefinedTerm",
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "name": {
+                "type": "string"    
+              },
+              "termCode": {
+                "type": "string"
+              }
+            },
+            "required": [
+            ]  
+          },
+          "medicalCondition": {
+            "@type": "MedicalCondition",
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "name": {
+                "type": "string"    
+              }
+            },
+            "required": [
+            ]  
+          },
+          "bioChemEntity" : {
+            "@type": "bioschemas:BioChemEntity",
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "name": {
+                "type": "string"    
+              }
+            },
+            "required": [
+            ]  
+          },
+          "gene" : {
+            "@type": "bioschemas:Gene",
+            "type": "object",
+            "properties": {
+              "identifier": {
+                "anyOf": [
+                  {
+                    "$ref": "#/definitions/propertyValue"
+                  },
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                ]
+              },
+              "name": {
+                "type": "string"    
+              }
+            },
+            "required": [
+            ]  
+          },
+          "quantitativeValue": {
+            "@type": "QuantitativeValue",
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "string" 
+              },
+              "unitText": {
+                "type": "string"    
+              }
+            },
+            "required": [
+            ]  
+          }
+        }
       }
     },
     {
-      "@id": "bioschemastemp:inChI",
+      "@id": "bioschemas:inChI",
       "@type": "rdf:Property",
       "rdfs:comment": "Non-proprietary identifier for molecular entity that can be used in printed and electronic data sources thus enabling easier linking of diverse data compilations.",
       "rdfs:label": "inChI",
       "schema:domainIncludes": {
-        "@id": "bioschemastemp:MolecularEntity"
+        "@id": "bioschemas:MolecularEntity"
       },
       "schema:rangeIncludes": [
         {
@@ -546,12 +695,12 @@
       ]
     },
     {
-      "@id": "bioschemastemp:inChIKey",
+      "@id": "bioschemas:inChIKey",
       "@type": "rdf:Property",
       "rdfs:comment": "InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm).",
       "rdfs:label": "inChIKey",
       "schema:domainIncludes": {
-        "@id": "bioschemastemp:MolecularEntity"
+        "@id": "bioschemas:MolecularEntity"
       },
       "schema:rangeIncludes": [
         {
@@ -560,12 +709,12 @@
       ]
     },
     {
-      "@id": "bioschemastemp:iupacName",
+      "@id": "bioschemas:iupacName",
       "@type": "rdf:Property",
       "rdfs:comment": "Systematic method of naming chemical compounds as recommended by the International Union of Pure and Applied Chemistry (IUPAC).",
       "rdfs:label": "iupacName",
       "schema:domainIncludes": {
-        "@id": "bioschemastemp:MolecularEntity"
+        "@id": "bioschemas:MolecularEntity"
       },
       "schema:rangeIncludes": [
         {
@@ -574,12 +723,12 @@
       ]
     },
     {
-      "@id": "bioschemastemp:molecularFormula",
+      "@id": "bioschemas:molecularFormula",
       "@type": "rdf:Property",
       "rdfs:comment": "The empirical formula is the simplest whole number ratio of all the atoms in a molecule.",
       "rdfs:label": "molecularFormula",
       "schema:domainIncludes": {
-        "@id": "bioschemastemp:MolecularEntity"
+        "@id": "bioschemas:MolecularEntity"
       },
       "schema:rangeIncludes": [
         {
@@ -588,12 +737,12 @@
       ]
     },
     {
-      "@id": "bioschemastemp:molecularWeight",
+      "@id": "bioschemas:molecularWeight",
       "@type": "rdf:Property",
       "rdfs:comment": "This is the molecular weight of the entity being described, not of the parent. Units should be included in the form \u2018 ', for example '12 amu' or as '.",
       "rdfs:label": "molecularWeight",
       "schema:domainIncludes": {
-        "@id": "bioschemastemp:MolecularEntity"
+        "@id": "bioschemas:MolecularEntity"
       },
       "schema:rangeIncludes": [
         {
@@ -602,12 +751,12 @@
       ]
     },
     {
-      "@id": "bioschemastemp:smiles",
+      "@id": "bioschemas:smiles",
       "@type": "rdf:Property",
       "rdfs:comment": "A specification in form of a line notation for describing the structure of chemical species using short ASCII strings. Double bond stereochemistry \\ indicators may need to be escaped in the string in formats where the backslash is an escape character.",
       "rdfs:label": "smiles",
       "schema:domainIncludes": {
-        "@id": "bioschemastemp:MolecularEntity"
+        "@id": "bioschemas:MolecularEntity"
       },
       "schema:rangeIncludes": [
         {
@@ -616,12 +765,12 @@
       ]
     },
     {
-      "@id": "bioschemastemp:chemicalRole",
+      "@id": "bioschemas:chemicalRole",
       "@type": "rdf:Property",
       "rdfs:comment": "A role played by the BioChemEntity within a chemical context.",
       "rdfs:label": "chemicalRole",
       "schema:domainIncludes": {
-        "@id": "bioschemastemp:MolecularEntity"
+        "@id": "bioschemas:MolecularEntity"
       },
       "schema:rangeIncludes": [
         {
@@ -630,12 +779,12 @@
       ]
     },
     {
-      "@id": "bioschemastemp:monoisotopicMolecularWeight",
+      "@id": "bioschemas:monoisotopicMolecularWeight",
       "@type": "rdf:Property",
       "rdfs:comment": "The monoisotopic mass is the sum of the masses of the atoms in a molecule using the unbound, ground-state, rest mass of the principal (most abundant) isotope for each element instead of the isotopic average mass. Please include the units the form \u2018 ', for example '770.230488 g/mol' or as '.",
       "rdfs:label": "monoisotopicMolecularWeight",
       "schema:domainIncludes": {
-        "@id": "bioschemastemp:MolecularEntity"
+        "@id": "bioschemas:MolecularEntity"
       },
       "schema:rangeIncludes": [
         {
@@ -647,12 +796,12 @@
       ]
     },
     {
-      "@id": "bioschemastemp:potentialUse",
+      "@id": "bioschemas:potentialUse",
       "@type": "rdf:Property",
       "rdfs:comment": "Intended use of the BioChemEntity by humans.",
       "rdfs:label": "potentialUse",
       "schema:domainIncludes": {
-        "@id": "bioschemastemp:MolecularEntity"
+        "@id": "bioschemas:MolecularEntity"
       },
       "schema:rangeIncludes": [
         {

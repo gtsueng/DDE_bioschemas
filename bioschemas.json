@@ -250,6 +250,9 @@
                   },
                   "value": {
                     "type": "string"    
+                  },
+                  "identifier": {
+                    "type": "string"    
                   }
                 },
                 "required": [
@@ -807,6 +810,9 @@
               },
               "value": {
                 "type": "string"    
+              },
+              "identifier": {
+                "type": "string"    
               }
             },
             "required": [
@@ -825,6 +831,9 @@
               },
               "termCode": {
                 "type": "string"
+              },
+              "identifier": {
+                "type": "string"    
               }
             },
             "required": [
@@ -840,6 +849,9 @@
               },
               "name": {
                 "type": "string"    
+              },
+              "identifier": {
+                "type": "string"    
               }
             },
             "required": [
@@ -854,6 +866,9 @@
                 "format": "uri"
               },
               "name": {
+                "type": "string"    
+              },
+              "identifier": {
                 "type": "string"    
               }
             },
@@ -3090,6 +3105,9 @@
               },
               "value": {
                 "type": "string"    
+              },
+              "identifier": {
+                "type": "string"    
               }
             },
             "required": [
@@ -3108,6 +3126,9 @@
               },
               "termCode": {
                 "type": "string"
+              },
+              "identifier": {
+                "type": "string"    
               }
             },
             "required": [
@@ -3123,6 +3144,9 @@
               },
               "name": {
                 "type": "string"    
+              },
+              "identifier": {
+                "type": "string"    
               }
             },
             "required": [
@@ -3137,6 +3161,9 @@
                 "format": "uri"
               },
               "name": {
+                "type": "string"    
+              },
+              "identifier": {
                 "type": "string"    
               }
             },

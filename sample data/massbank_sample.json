@@ -1,0 +1,31 @@
+[
+{
+"identifier": "LQB00001",
+"url": "https://massbank.eu/MassBank/RecordDisplay?id=LQB00001",
+"name": "Cer[AP] t34:0",
+"alternateName": "Cer[AP] t34:0",
+"inchikey": "RHIXBFQKTNYVCX-UHFFFAOYSA-N",
+"description": "This MassBank record with Accession LQB00001 contains the MS2 mass spectrum of 'Cer[AP] t34:0'.",
+"molecularFormula": "C34H69NO5",
+"monoisotopicMolecularWeight": "571.928",
+"inChI": "InChI=1S/C34H69NO5/c1-3-5-7-9-11-13-15-17-19-21-23-25-27-31(37)33(39)30(29-36)35-34(40)32(38)28-26-24-22-20-18-16-14-12-10-8-6-4-2/h30-33,36-39H,3-29H2,1-2H3,(H,35,40)",
+"smiles": "CCCCCCCCCCCCCCC(O)C(O)C(CO)NC(=O)C(O)CCCCCCCCCCCCCC",
+"@context": "http://schema.org",
+"@type": "MolecularEntity"
+},
+{
+"identifier": "LQB00001",
+"url": "https://massbank.eu/MassBank/RecordDisplay?id=LQB00001",
+"headline": "Cer[AP] t34:0; LC-ESI-QTOF; MS2",
+"name": "Cer[AP] t34:0",
+"description": "This MassBank record with Accession LQB00001 contains the MS2 mass spectrum of 'Cer[AP] t34:0'.",
+"measurementTechnique": "mass spectrometry",
+"datePublished": "2016-10-03",
+"license": "https://creativecommons.org/licenses/by/4.0",
+"citation": "null",
+"comment": "Found in mouse small intestine; TwoDicalId=238; MgfFile=160907_Small_Intestine_normal_Neg_01_never; MgfId=1081",
+"alternateName": "Cer[AP] t34:0",
+"@context": "http://schema.org",
+"@type": "Dataset"
+}
+]

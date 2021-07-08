@@ -2045,14 +2045,34 @@
           },
           "hasMolecularFunction": {
             "description": "Molecular function performed by this BioChemEntity; please use PropertyValue if you want to include any evidence.",
-            "oneOf": [
+            "anyOf": [
               {
-                "$ref": "#/definitions/molecularFunctions"
+                "$ref": "#/definitions/definedTerm"
               },
               {
                 "type": "array",
                 "items": {
-                  "$ref": "#/definitions/molecularFunctions"
+                  "$ref": "#/definitions/definedTerm"
+                }
+              },
+              {
+                "$ref": "#/definitions/propertyValue"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/propertyValue"
+                }
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
                 }
               }
             ]
@@ -2093,28 +2113,68 @@
           },
           "isInvolvedInBiologicalProcess": {
             "description": "Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.",
-            "oneOf": [
+            "anyOf": [
               {
-                "$ref": "#/definitions/biologicalProcesses"
+                "$ref": "#/definitions/definedTerm"
               },
               {
                 "type": "array",
                 "items": {
-                  "$ref": "#/definitions/biologicalProcesses"
+                  "$ref": "#/definitions/definedTerm"
+                }
+              },
+              {
+                "$ref": "#/definitions/propertyValue"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/propertyValue"
+                }
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
                 }
               }
             ]
           },
           "isLocatedInSubcellularLocation": {
             "description": "Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.",
-            "oneOf": [
+            "anyOf": [
               {
-                "$ref": "#/definitions/subcellularLocations"
+                "$ref": "#/definitions/definedTerm"
               },
               {
                 "type": "array",
                 "items": {
-                  "$ref": "#/definitions/subcellularLocations"
+                  "$ref": "#/definitions/definedTerm"
+                }
+              },
+              {
+                "$ref": "#/definitions/propertyValue"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/propertyValue"
+                }
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
                 }
               }
             ]
@@ -2411,46 +2471,7 @@
                 ]  
               }
             ]
-      },
-          "molecularFunctions": {
-            "@type": "DefinedTerm",
-            "type": "string",
-            "vocabulary": {
-              "ontology": [
-                "goMolecularFunction"
-              ],
-              "children_of": [
-                "http://purl.obolibrary.org/obo/GO_0003674"
-              ]
-            },
-            "strict": false
-          },
-          "biologicalProcesses": {
-            "@type": "DefinedTerm",
-            "type": "string",
-            "vocabulary": {
-              "ontology": [
-                "goBiologicalProcess"
-              ],
-              "children_of": [
-                "http://purl.obolibrary.org/obo/GO_0008150"
-              ]
-            },
-            "strict": false
-          },
-          "subcellularLocations": {
-            "@type": "DefinedTerm",
-            "type": "string",
-            "vocabulary": {
-              "ontology": [
-                "goSubcellularLocation"
-              ],
-              "children_of": [
-                "http://purl.obolibrary.org/obo/GO_0005575"
-              ]
-            },
-            "strict": false
-          }
+      }
         }
       }
     },

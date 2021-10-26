@@ -18,7 +18,7 @@
         "$schema": "http://json-schema.org/draft-07/schema#",
         "type": "object",
         "properties": {
-          "@type": {
+          "bioschemas:@type": {
             "description": "declares the resource identified in the markup to be of a specific type, e.g. Gene, MolecularEntity, or Protein; non-JSON-LD serialisations would need to use the appropriate mechanism for the serialisation",
             "type": "string"
           },
@@ -26,7 +26,7 @@
             "description": "states what profile version the markup complies with, useful for validation engines",
             "$ref": "#/definitions/schema"
           },
-          "@id": {
+          "bioschemas:@id": {
             "description": "sets the identifier for the resource, avoiding the introduction of blank nodes in the markup; non-JSON-LD serialisations would use equivalent mechanism",
             "type": "string"
           },
@@ -759,6 +759,51 @@
         },
         {
           "@id": "schema:ComputerLanguage"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:@type",
+      "@type": "rdf:Property",
+      "rdfs:comment": "declares the resource identified in the markup to be of a specific type, e.g. Gene, MolecularEntity, or Protein; non-JSON-LD serialisations would need to use the appropriate mechanism for the serialisation",
+      "rdfs:label": "@type",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:ComputationalTool"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:dct:conformsTo",
+      "@type": "rdf:Property",
+      "rdfs:comment": "states what profile version the markup complies with, useful for validation engines",
+      "rdfs:label": "dct:conformsTo",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:ComputationalTool"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:@id",
+      "@type": "rdf:Property",
+      "rdfs:comment": "sets the identifier for the resource, avoiding the introduction of blank nodes in the markup; non-JSON-LD serialisations would use equivalent mechanism",
+      "rdfs:label": "@id",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:ComputationalTool"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
         }
       ]
     }

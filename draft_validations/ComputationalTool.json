@@ -18,10 +18,6 @@
         "$schema": "http://json-schema.org/draft-07/schema#",
         "type": "object",
         "properties": {
-          "dct:conformsTo": {
-            "description": "states what profile version the markup complies with, useful for validation engines",
-            "$ref": "#/definitions/schema"
-          },
           "codeRepository": {
             "description": "Link to the source code repository of the tool.",
             "oneOf": [
@@ -751,23 +747,6 @@
         },
         {
           "@id": "schema:ComputerLanguage"
-        }
-      ]
-    },
-    {
-      "@id": "bioschemas:dct:conformsTo",
-      "@type": "rdf:Property",
-      "rdfs:comment": "states what profile version the markup complies with, useful for validation engines",
-      "rdfs:label": "dct:conformsTo",
-      "schema:domainIncludes": {
-        "@id": "bioschemas:ComputationalTool"
-      },
-      "schema:rangeIncludes": [
-        {
-          "@id": "schema:Text"
-        },
-        {
-          "@id": "schema:URL"
         }
       ]
     }

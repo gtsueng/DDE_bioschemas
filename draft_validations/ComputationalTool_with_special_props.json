@@ -18,7 +18,7 @@
         "$schema": "http://json-schema.org/draft-07/schema#",
         "type": "object",
         "properties": {
-          "bioschemas:@type": {
+          "@type": {
             "description": "declares the resource identified in the markup to be of a specific type, e.g. Gene, MolecularEntity, or Protein; non-JSON-LD serialisations would need to use the appropriate mechanism for the serialisation",
             "type": "string"
           },
@@ -26,7 +26,7 @@
             "description": "states what profile version the markup complies with, useful for validation engines",
             "$ref": "#/definitions/schema"
           },
-          "bioschemas:@id": {
+          "@id": {
             "description": "sets the identifier for the resource, avoiding the introduction of blank nodes in the markup; non-JSON-LD serialisations would use equivalent mechanism",
             "type": "string"
           },

@@ -12,7 +12,7 @@
       "rdfs:comment": "Bioschemas specification for describing a formal parameter in the Life Sciences. Version: 1.0-RELEASE (09 March 2021) ",
       "rdfs:label": "FormalParameter",
       "rdfs:subClassOf": {
-        "@id": "schema:Thing"
+        "@id": "schema:Intangible"
       },
       "$validation": {
         "$schema": "http://json-schema.org/draft-07/schema#",

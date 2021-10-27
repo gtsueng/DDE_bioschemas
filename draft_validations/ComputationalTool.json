@@ -649,6 +649,43 @@
             },
             "required": []
           },
+          "person": {
+            "@type": "Person",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "alternateName": {
+                "type": "string"
+              },
+              "givenName": {
+                "type": "string"
+              },
+              "familyName": {
+                "type": "string",
+              "identifier": {
+                "type": "string"
+              }
+              },
+              "affiliation": {
+                  "oneOf": [
+                    {
+                        "$ref": "#/definitions/organization"
+                    },
+                    {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/organization"
+                        }
+                    }
+                  ]
+              },
+              "identifier": {
+                "type": "string"
+              }
+            }
+          },
           "organization": {
             "@type": "Organization",
             "type": "object",

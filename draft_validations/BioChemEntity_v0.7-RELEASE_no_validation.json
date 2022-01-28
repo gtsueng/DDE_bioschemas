@@ -11,6 +11,8 @@
       "@type": "rdfs:Class",
       "rdfs:comment": "Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical.",
       "rdfs:label": "BioChemEntity",
+      "schema:additionalType": "Type",
+      "schema:schemaVersion":"0.7_RELEASE",
       "rdfs:subClassOf": {
         "@id": "schema:Thing"
       }

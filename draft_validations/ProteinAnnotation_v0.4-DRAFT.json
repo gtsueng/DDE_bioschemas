@@ -4,12 +4,14 @@
         "rdf": "https://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "dct": "https://dublincore.org/specifications/dublin-core/dcmi-terms/#",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
     },
     "@graph": [
         {
             "@id": "bioschemas:ProteinAnnotation",
             "@type": "rdfs:Class",
+            "owl:deprecated": "True",
             "rdfs:comment": "Bioschemas specification describing a Protein annotation (BioChemEntity profile) in Life Sciences. This profile specification presents the BioChemEntity usage when describing a Protein annotation. Version: 0.4-DRAFT-2018_02_25",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/ProteinAnnotation/0.4-DRAFT-2018_02_25"

@@ -174,7 +174,7 @@
                         "description": " The name of the item.",
                         "type": "string"
                     },
-                    "hasGrowthChamber": {
+                    "hasGrowthFacility": {
                         "description": "The kind of growth facility used in a plant study has growth facility",
                         "type": "string",
                         "format": "uri"

@@ -1,0 +1,82 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemas": "https://discovery.biothings.io/view/bioschemas/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemas:Rna",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Bioschemas RNA draft version 0.2",
+      "rdfs:label": "Rna",
+      "rdfs:subClassOf": {
+        "@id": "bioschemas:BioChemEntity"
+      },
+      "$validation": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "encodesBioChemEntity": {
+            "description": "Another BioChemEntity encoded by this one. Inverse property: isEncodedByBioChemEntity.",
+            "oneOf": [
+              {
+                "$ref": "#/definitions/bioChemEntity"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/bioChemEntity"
+                }
+              }
+            ]
+          },
+          "hasSequence": {
+            "description": "Nucleotide or amino acid sequence.",
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "@id": "bioschemas:encodesBioChemEntity",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Another BioChemEntity encoded by this one. Inverse property: isEncodedByBioChemEntity.",
+      "rdfs:label": "encodesBioChemEntity",
+      "schema:domainIncludes": [
+        {
+          "@id": "bioschemas:Dna"
+        },
+        {
+          "@id": "bioschemas:Rna"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "bioschemas:BioChemEntity"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:hasSequence",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Nucleotide or amino acid sequence.",
+      "rdfs:label": "hasSequence",
+      "schema:domainIncludes": [
+        {
+          "@id": "bioschemas:Dna"
+        },
+        {
+          "@id": "bioschemas:Rna"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    }
+  ]
+}

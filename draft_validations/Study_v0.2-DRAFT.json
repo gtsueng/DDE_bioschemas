@@ -645,10 +645,10 @@
             }
         },
         {
-            "@id": "ppeo:hasGrowthChamber",
+            "@id": "ppeo:hasGrowthFacility",
             "rdfs:comment": "has growth facility The kind of growth facility used in a plant study",
             "@type": "rdf:Property",
-            "rdfs:label": "hasGrowthChamber",
+            "rdfs:label": "hasGrowthFacility",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Study"
             },

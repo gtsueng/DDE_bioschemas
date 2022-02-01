@@ -762,7 +762,7 @@
         },
         {
             "@id": "bioschemas:studyLocation",
-            "rdfs:comment": "A process performed as part of an experiment or wider study, i.e. intentionally designed.\nThese processes can have ontology URL attached to. For example, in the life sciences  we could have \nRNA-seq of coding RNA from single cells: http://www.ebi.ac.uk/efo/EFO_0005684\ncase control design: http://www.ebi.ac.uk/efo/EFO_0001427",
+            "rdfs:comment": "The location in which the study is taking/took place.",
             "@type": "rdf:Property",
             "rdfs:label": "studyLocation",
             "schema:domainIncludes": {
@@ -779,9 +779,9 @@
         },
         {
             "@id": "bioschemas:studySubject",
-            "rdfs:comment": "A process performed as part of an experiment or wider study, i.e. intentionally designed.\nThese processes can have ontology URL attached to. For example, in the life sciences  we could have \nRNA-seq of coding RNA from single cells: http://www.ebi.ac.uk/efo/EFO_0005684\ncase control design: http://www.ebi.ac.uk/efo/EFO_0001427",
+            "rdfs:comment": "A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.",
             "@type": "rdf:Property",
-            "rdfs:label": "studysubJect",
+            "rdfs:label": "studySubJect",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Study"
             },

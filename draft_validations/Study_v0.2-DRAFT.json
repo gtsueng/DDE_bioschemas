@@ -634,6 +634,23 @@
             ]
         },
         {
+            "@id": "bioschemas:startDate",
+            "rdfs:comment": "The start date and time of the item (in ISO 8601 date format). ",
+            "@type": "rdf:Property",
+            "rdfs:label": "startDate",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Study"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Date"
+                },
+                {
+                    "@id": "schema:DateTime"
+                }
+            ]
+        },
+        {
             "@id": "bioschemas:endDate",
             "rdfs:comment": "The end date and time of the item (in ISO 8601 date format). ",
             "@type": "rdf:Property",

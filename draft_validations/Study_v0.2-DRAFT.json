@@ -4,7 +4,7 @@
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
-        "PPEO": "http://purl.org/ppeo/PPEO.owl#"
+        "ppeo": "http://purl.org/ppeo/PPEO.owl#"
     },
     "@graph": [
         {
@@ -645,7 +645,7 @@
             }
         },
         {
-            "@id": "PPEO:hasGrowthChamber",
+            "@id": "ppeo:hasGrowthChamber",
             "rdfs:comment": "has growth facility The kind of growth facility used in a plant study",
             "@type": "rdf:Property",
             "rdfs:label": "hasGrowthChamber",

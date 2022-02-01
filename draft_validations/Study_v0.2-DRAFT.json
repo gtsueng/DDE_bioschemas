@@ -174,7 +174,7 @@
                         "description": " The name of the item.",
                         "type": "string"
                     },
-                    "hasGrowthFacility": {
+                    "hasGrowthChamber": {
                         "description": "The kind of growth facility used in a plant study has growth facility",
                         "type": "string",
                         "format": "uri"
@@ -645,10 +645,11 @@
             }
         },
         {
-            "@id": "ppeo:hasGrowthFacility",
+            "@id": "bioschemas:hasGrowthChamber",
             "rdfs:comment": "has growth facility The kind of growth facility used in a plant study",
             "@type": "rdf:Property",
-            "rdfs:label": "hasGrowthFacility",
+            "rdfs:label": "hasGrowthChamber",
+            "schema:sameAs": {"@id": "ppeo:hasGrowthChamber"},
             "schema:domainIncludes": {
                 "@id": "bioschemas:Study"
             },

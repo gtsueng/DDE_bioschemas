@@ -1,0 +1,54 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemastest": "https://discovery.biothings.io/view/bioschemastest/",
+    "bioschemas": "https://discovery.biothings.io/view/bioschemas/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemastest:DnaDraftExtensionTest",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Testing the extension from a bioschemas type (not profile)",
+      "rdfs:label": "DnaDraftExtensionTest",
+      "rdfs:subClassOf": {
+        "@id": "bioschemas:DNA"
+      },
+      "$validation": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "hasSequence": {
+            "description": "Nucleotide or amino acid sequence.",
+            "type": "string"
+          },
+          "encodesBioChemEntity": {
+            "description": "Another BioChemEntity encoded by this one. Inverse property:isEncodedByBioChemEntity.",
+            "type": "string"
+          },
+          "biologicalRole": {
+            "description": "A role played by the BioChemEntity within a biological context.",
+            "type": "string"
+          },
+          "hasRepresentation": {
+            "description": "A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.",
+            "type": "string"
+          },
+          "name": {
+            "description": "The name of the item.",
+            "type": "string"
+          },
+          "sameAs": {
+            "description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [],
+        "recommended": [],
+        "optional": []
+      }
+    }
+  ]
+}

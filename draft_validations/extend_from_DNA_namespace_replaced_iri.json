@@ -22,11 +22,11 @@
             "description": "Nucleotide or amino acid sequence.",
             "type": "string"
           },
-          "bioeschemas:encodesBioChemEntity": {
+          "bioschemas:encodesBioChemEntity": {
             "description": "Another BioChemEntity encoded by this one. Inverse property:isEncodedByBioChemEntity.",
             "type": "string"
           },
-          "biologicalRole": {
+          "schema:biologicalRole": {
             "description": "A role played by the BioChemEntity within a biological context.",
             "type": "string"
           },

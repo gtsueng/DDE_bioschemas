@@ -1,0 +1,49 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemastest": "https://discovery.biothings.io/view/bioschemastest/",
+    "bioschemas": "https://discovery.biothings.io/view/bioschemas/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemastest:ThreeParentsUp",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Properties inherited from direct parent class, grandparent class and great grandparent class",
+      "rdfs:label": "ThreeParentsUp",
+      "rdfs:subClassOf": {
+        "@id": "bioschemas:SequenceAnnotation"
+      },
+      "$validation": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "sequenceValue": {
+            "description": "value of the sequence",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "format": "uri",
+                "type": "string"
+              }
+            ]
+          },
+          "biologicalRole": {
+            "description": "A role played by the BioChemEntity within a biological context.",
+            "type": "string"
+          },
+          "name": {
+            "description": "The name of the item.",
+            "type": "string"
+          }
+        },
+        "required": [],
+        "recommended": [],
+        "optional": []
+      }
+    }
+  ]
+}

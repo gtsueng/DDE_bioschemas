@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/",
+    "bioschemas": "https://discovery.biothings.io/view/bioschemas/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemastypes:BioChemEntity",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical.\nNote, this version is equivalent to the pending BioChemEntity in schema.org\nversion: 0.7-RELEASE-2019_06_19",
+      "rdfs:label": "BioChemEntity",
+      "rdfs:subClassOf": {
+        "@id": "schema:BioChemEntity"
+      }
+    }
+  ]
+}

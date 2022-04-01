@@ -4,10 +4,7 @@
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
-    "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
-    "bioschemasdrafts": "https://discovery.biothings.io/view/bioschemasdrafts/",
     "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/",
-    "bioschemasdeprecated": "https://discovery.biothings.io/view/bioschemasdeprecated/",
     "dct": "http://purl.org/dc/terms/",
     "owl": "http://www.w3.org/2002/07/owl#"
   },
@@ -190,7 +187,7 @@
       },
       "additional_type": "https://bioschemas.org/types#nav-draft",
       "schema:schemaVersion": [
-        "https://bioschemas.org/types/TaxonName/0.1-DRAFT-TYPE",
+        "https://bioschemas.org/types/TaxonName/0.1-DRAFT",
         "https://github.com/gtsueng/DDE_bioschemas/blob/main/draft_validations/TaxonName_v0.1-DRAFT-TYPE.json"
       ]
     },

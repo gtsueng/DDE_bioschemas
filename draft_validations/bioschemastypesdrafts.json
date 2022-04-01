@@ -986,7 +986,7 @@
       ]
     },
     {
-      "@id": "scientificName",
+      "@id": "bioschemastypesdrafts:scientificName",
       "rdfs:comment": "A TaxonName representing the currently valid (zoological) or accepted (botanical) name for that taxon.",
       "@type": "rdf:Property",
       "rdfs:label": "scientificName",
@@ -1006,7 +1006,7 @@
       ]
     },
     {
-      "@id": "alternateScientificName",
+      "@id": "bioschemastypesdrafts:alternateScientificName",
       "rdfs:comment": "A TaxonName representing a scientific name, with authorship and date information if known, of a synonym of the currently valid (zoological) or accepted (botanical) name.",
       "@type": "rdf:Property",
       "rdfs:label": "alternateScientificName",

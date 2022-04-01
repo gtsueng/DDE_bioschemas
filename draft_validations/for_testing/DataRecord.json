@@ -14,18 +14,6 @@
       "rdfs:label": "DataRecord",
       "rdfs:subClassOf": {
         "@id": "schema:CreativeWork"
-      },
-      "$validation": {
-        "$schema": "http://json-schema.org/draft-07/schema#",
-        "type": "object",
-        "properties": {
-          "includedInDataset": {
-            "description": "A Dataset which contains this DataRecord."
-          }
-        },
-        "required": [],
-        "recommended": [],
-        "optional": []
       }
     },
     {

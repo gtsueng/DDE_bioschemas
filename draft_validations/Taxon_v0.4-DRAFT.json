@@ -12,7 +12,7 @@
             "rdfs:comment": "A set of organisms asserted to represent a natural cohesive biological unit. Version: 0.4-DRAFT-2019_06_24",
             "rdfs:label": "Taxon",
             "rdfs:subClassOf": {
-                "@id": "bioschemastypesdrafts:Taxon"
+                "@id": "schema:Thing"
             }
         },
         {

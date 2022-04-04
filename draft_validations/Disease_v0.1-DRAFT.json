@@ -3,12 +3,11 @@
     "schema": "http://schema.org/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "bioschemasdraftstemp": "https://discovery.biothings.io/view/bioschemasdraftstemp/",
-    "bioschemas": "https://discovery.biothings.io/view/bioschemas/"
+    "bioschemasdrafts": "https://discovery.biothings.io/view/bioschemasdrafts/"
   },
   "@graph": [
     {
-      "@id": "bioschemasdraftstemp:Disease",
+      "@id": "bioschemasdrafts:Disease",
       "@type": "rdfs:Class",
       "rdfs:comment": "This is the first draft of the Disease profile, using MedicalCondition type from schema.org as template for inheriting some properties. Version 0.1-DRAFT",
       "rdfs:label": "Disease",
@@ -113,7 +112,7 @@
             ]
           },
           "url": {
-            "description": "URL of the item.",
+            "description": "URL of the item. Link to the official webpage associated to this entity.",
             "type": "string",
             "format": "uri"
           }
@@ -211,6 +210,40 @@
             "optional": [
               "unitCode",
               "unitText"
+            ]
+          },
+          "imageobject": {
+            "@type": "ImageObject",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string",
+                    "format": "uri"
+                }
+            },
+            "required": []
+          },
+          "categorycode": {
+            "@type": "CategoryCode",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "codeValue": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "codeValue",
+                "url"
             ]
           }
         }

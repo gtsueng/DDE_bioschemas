@@ -7,7 +7,7 @@
   },
   "@graph": [
     {
-      "@id": "bioschemas:Protein",
+      "@id": "bioschemasdrafts:Protein",
       "@type": "rdfs:Class",
       "rdfs:comment": "This Protein profile specification presents the most common properties used for a Protein plus examples on how to use them. Version 0.12 \n Changes since previous release of the Protein Profile:\n Updated type properties to Schema.org pending release.\n Addition of hasSequenceAnnotation property at Recommended level.",
       "rdfs:label": "Protein",
@@ -466,7 +466,7 @@
         ],
         "definitions":{
           "taxon": {
-            "@type": "bioschemas:Taxon",
+            "@type": "Taxon",
             "type": "object",
             "properties": {
               "name": {
@@ -568,7 +568,7 @@
             ]  
           },
           "bioChemEntity" : {
-            "@type": "bioschemas:BioChemEntity",
+            "@type": "bioschemastypes:BioChemEntity",
             "type": "object",
             "properties": {
               "url": {
@@ -586,7 +586,7 @@
             ]  
           },
           "gene" : {
-            "@type": "bioschemas:Gene",
+            "@type": "Gene",
             "type": "object",
             "properties": {
               "identifier": {
@@ -651,7 +651,7 @@
             ]
       },
           "dna": {
-            "@type": "bioschemas:Dna",
+            "@type": "bioschemastypesdrafts:DNA",
             "type": "object",
             "properties": {
               "encodesBioChemEntity": {
@@ -675,7 +675,7 @@
             ]                
           },
           "rna": {
-            "@type": "bioschemas:Rna",
+            "@type": "bioschemastypesdrafts:RNA",
             "type": "object",
             "properties": {
               "encodesBioChemEntity": {

@@ -91,7 +91,7 @@
                         ]
                     },
                     "boundMolecule": {
-                        "description": " Bound molecules.",
+                        "description": "Bound molecules.",
                         "anyOf": [
                             {
                                 "type": "string",
@@ -105,12 +105,12 @@
                                 }
                             },
                             {
-                                "type": "string",
+                                "type": "string"
                             },
                             {
                                 "type": "array",
                                 "items": {
-                                    "type": "string",
+                                    "type": "string"
                                 }
                             }
                         ]
@@ -153,12 +153,12 @@
                                 }
                             },
                             {
-                                "type": "string",
+                                "type": "string"
                             },
                             {
                                 "type": "array",
                                 "items": {
-                                    "type": "string",
+                                    "type": "string"
                                 }
                             }
                         ]
@@ -333,12 +333,12 @@
                                 }
                             },
                             {
-                                "type": "string",
+                                "type": "string"
                             },
                             {
                                 "type": "array",
                                 "items": {
-                                    "type": "string",
+                                    "type": "string"
                                 }
                             }
                         ]

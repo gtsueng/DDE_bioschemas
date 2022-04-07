@@ -384,7 +384,7 @@
                         ]
                     },
                     "biochementity": {
-                        "@type": "bioschemasdrafts:BioChemEntity",
+                        "@type": "schema:BioChemEntity",
                         "type": "object",
                         "properties": {
                             "url": {
@@ -537,7 +537,7 @@
             "@type": "rdf:Property",
             "rdfs:label": "additionalProperty",
             "schema:domainIncludes": {
-                "@id": "bioschemasdrafts:ProteinAnnotation"
+                "@id": "bioschemasdeprecated:ProteinAnnotation"
             },
             "schema:rangeIncludes": [
                 {

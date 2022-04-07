@@ -14,7 +14,8 @@
       "rdfs:label": "LabProtocol",
       "rdfs:subClassOf": {
         "@id": "schema:CreativeWork"
-      },
+      }
+    },
     {
       "@id": "bioschemastemp:protocolAdvantage",
       "@type": "rdf:Property",

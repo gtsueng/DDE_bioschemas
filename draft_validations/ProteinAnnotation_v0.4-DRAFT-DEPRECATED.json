@@ -537,7 +537,7 @@
             "@type": "rdf:Property",
             "rdfs:label": "additionalProperty",
             "schema:domainIncludes": {
-                "@id": "bioschemasdrafts:ProteinStructure"
+                "@id": "bioschemasdrafts:ProteinAnnotation"
             },
             "schema:rangeIncludes": [
                 {

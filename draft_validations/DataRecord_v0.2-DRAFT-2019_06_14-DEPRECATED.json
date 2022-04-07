@@ -341,7 +341,32 @@
               }
             },
             "required": []
-          }
+          },
+          "productObject": {
+            "description": "a product object.",
+            "@type": "Product",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            },
+              "required": []
+          },
+          "imageObject": {
+            "description": "an image object.",
+            "@type": "ImageObject",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              }
+            },
+            "required": []
+        }
         }
       }
     },

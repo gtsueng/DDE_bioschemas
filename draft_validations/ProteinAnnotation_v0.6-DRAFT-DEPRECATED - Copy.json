@@ -12,9 +12,9 @@
             "@id": "bioschemasdeprecated:ProteinAnnotation",
             "@type": "rdfs:Class",
             "owl:deprecated": "True",
-            "rdfs:comment": "Bioschemas specification describing a Protein annotation (BioChemEntity profile) in Life Sciences. This profile specification presents the BioChemEntity usage when describing a Protein annotation. Version: 0.4-DRAFT-2018_02_25",
+            "rdfs:comment": "This profile specification presents the BioChemEntity usage when describing a Protein annotation. Version: 0.6-DRAFT. \nChanges since the previous release of the ProtainAnnotation Profile: \nalternateName demoted to Optional level \n contains replaced by hasBioChemEntityPart \nisContainedIn replaced by isPartOfBioChemEntity \nsubcellularLocation added as an Optional level property",
             "schema:schemaVersion": [
-                "https://bioschemas.org/profiles/ProteinAnnotation/0.4-DRAFT-2018_02_25"
+                "https://bioschemas.org/profiles/ProteinAnnotation/0.6-DRAFT"
             ],
             "rdfs:label": "ProteinAnnotation",
             "rdfs:subClassOf": {
@@ -68,7 +68,7 @@
                             }
                         ]
                     },
-                    "contains": {
+                    "hasBioChemEntityPart": {
                         "description": "Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. Inverse property: isContainedIn. ",
                         "anyOf": [
                             {
@@ -175,7 +175,7 @@
                             }
                         ]
                     },
-                    "isContainedIn": {
+                    "isPartOfBioChemEntity": {
                         "description": "Indicates a BioChemEntity that this BioChemEntity is (in some sense) a part of. Inverse property: contains. ",
                         "anyOf": [
                             {
@@ -293,29 +293,45 @@
                         "description": "Link to the official webpage associated to this entity. URL of the item.",
                         "type": "string",
                         "format": "uri"
+                    },
+                    "subcellularLocation": {
+                        "description": "Location of the protein annotation within cellular compartment.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
                     }
                 },
                 "required": [
-                    "additionalType",
-                    "identifier",
-                    "type"
+                    "identifier"
                 ],
                 "recommended": [
-                    "alternateName",
+                    "additionalType",
                     "creationMethod",
                     "description",
+                    "image",
                     "name",
                     "url"
                 ],
                 "optional": [
+                    "alternateName",
                     "additionalProperty",
-                    "contains",
+                    "hasBioChemEntityPart",
                     "hasRepresentation",
-                    "image",
-                    "isContainedIn",
+                    "isPartOfBioChemEntity",
                     "location",
                     "mainEntityOfPage",
-                    "sameAs"
+                    "sameAs",
+                    "subcellularLocation"
                 ],
                 "definitions": {
                     "propertyvalue": {
@@ -546,10 +562,10 @@
             ]
         },
         {
-            "@id": "bioschemasdeprecated:contains",
-            "rdfs:comment": " Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. Inverse property: isContainedIn.",
+            "@id": "bioschemasdeprecated:hasBioChemEntityPart",
+            "rdfs:comment": " Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. Inverse property: isPartOfBioChemEntity.",
             "@type": "rdf:Property",
-            "rdfs:label": "contains",
+            "rdfs:label": "hasBioChemEntityPart",
             "schema:domainIncludes": {
                 "@id": "bioschemasdeprecated:ProteinAnnotation"
             },
@@ -597,10 +613,10 @@
             ]
         },
         {
-            "@id": "bioschemasdeprecated:isContainedIn",
-            "rdfs:comment": " Indicates a BioChemEntity that this BioChemEntity is (in some sense) a part of. Inverse property: contains.",
+            "@id": "bioschemasdeprecated:isPartOfBioChemEntity",
+            "rdfs:comment": " Indicates a BioChemEntity that this BioChemEntity is (in some sense) a part of. Inverse property: hasBioChemEntityPart.",
             "@type": "rdf:Property",
-            "rdfs:label": "isContainedIn",
+            "rdfs:label": "isPartOfBioChemEntity",
             "schema:domainIncludes": {
                 "@id": "bioschemasdeprecated:ProteinAnnotation"
             },
@@ -651,20 +667,6 @@
                 {
                     "@id": "schema:DataRecord"
                 },
-                {
-                    "@id": "schema:URL"
-                }
-            ]
-        },
-        {
-            "@id": "rdf:type",
-            "rdfs:comment": " This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.",
-            "@type": "rdf:Property",
-            "rdfs:label": "type",
-            "schema:domainIncludes": {
-                "@id": "bioschemasdeprecated:ProteinAnnotation"
-            },
-            "schema:rangeIncludes": [
                 {
                     "@id": "schema:URL"
                 }

@@ -268,11 +268,6 @@
                         "description": " The name of the item.",
                         "type": "string"
                     },
-                    "type": {
-                        "description": "This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column. ",
-                        "type": "string",
-                        "format": "uri"
-                    },
                     "sameAs": {
                         "description": "Link to any resource other than the Record and the official webpage, for instance a Wikipedia page. URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
                         "oneOf": [
@@ -558,6 +553,20 @@
             "schema:rangeIncludes": [
                 {
                     "@id": "schema:PropertyValue"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdeprecated:subcellularLocation",
+            "rdfs:comment": " Location of the protein annotation within cellular compartment.",
+            "@type": "rdf:Property",
+            "rdfs:label": "subcellularLocation",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdeprecated:ProteinAnnotation"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:URL"
                 }
             ]
         },

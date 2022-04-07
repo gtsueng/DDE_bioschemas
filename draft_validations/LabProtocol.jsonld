@@ -15,19 +15,6 @@
       "rdfs:subClassOf": {
         "@id": "schema:CreativeWork"
       },
-      "$validation": {
-        "$schema": "http://json-schema.org/draft-07/schema#",
-        "type": "object",
-        "properties": {
-          "protocolAdvantage": {
-            "description": "Situations where the Protocol has been successfully employed."
-          }
-        },
-        "required": [],
-        "recommended": [],
-        "optional": []
-      }
-    },
     {
       "@id": "bioschemastemp:protocolAdvantage",
       "@type": "rdf:Property",

@@ -74,6 +74,7 @@
           },
           "dateModified": {
             "owl:cardinality": "one",
+            "owl:cardinality": "one",
             "type": "string",
             "format": "date"
           },
@@ -624,7 +625,7 @@
       "@id": "niaid:ScholarlyArticle",
       "@type": "rdfs:Class",
       "rdfs:comment": "A scholarly article in which the computational tool is cited.",
-      "rdfs:label": "NiaidScholarlyArticle",
+      "rdfs:label": "ScholarlyArticle",
       "rdfs:subClassOf": {
         "@id": "schema:ScholarlyArticle"
       },

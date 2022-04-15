@@ -73,7 +73,7 @@
             "format": "uri"
           },
           "dateModified": {
-            "owl:cardinality": "one"
+            "owl:cardinality": "one",
             "type": "string",
             "format": "date"
           },

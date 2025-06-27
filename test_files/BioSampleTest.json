@@ -1,0 +1,648 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "mytest": "http://discovery.biothings.io/ns/mytest/"
+  },
+  "@graph": [
+    {
+      "@id": "mytest:Sample",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A Sample is a material specimen taken from a larger source, system, or environment, collected for the purpose of analysis, testing, identification, or demonstration. Examples of Sample type include ice core samples, metal coupons, blood samples, plant samples, etc. Version 0.3-DRAFT. <h4>Summary of Changes</h4><ul><li>Added properties selected by the updated Sample/BioSample working group, which are all the properties except for 'additionalProperty'.</li></ul>",
+      "rdfs:label": "Sample",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "mytest:additionalProperty",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A property-value pair representing an additional characteristics of the entity, e.g. \u201cOrganism: Homo sapiens\u201d or \u201ctissue type: leaf\u201d. For details of how to use PropertyValue see below.",
+      "rdfs:label": "additionalProperty",
+      "schema:domainIncludes": {
+        "@id": "mytest:Sample"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:PropertyValue"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:alternateIdentifier",
+      "@type": "rdf:Property",
+      "rdfs:comment": "An additional identifier for the same instance of the resource. ",
+      "rdfs:label": "alternateIdentifier",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:keywords",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Terms that capture the main subjects e.g. cancer, plant biology.",
+      "rdfs:label": "keywords",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:dateCollected",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The date on which the sample was collected.",
+      "rdfs:label": "dateCollected",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Date"
+        },
+        {
+          "@id": "schema:DateTime"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:datePublished",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The date when the  record of the sample will be made publicly available.",
+      "rdfs:label": "datePublished",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Date"
+        },
+        {
+          "@id": "schema:DateTime"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:dateModified",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Date sample record was last updated.",
+      "rdfs:label": "dateModified",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Date"
+        },
+        {
+          "@id": "schema:DateTime"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:dateCreated",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The date the sample was created or added to a DataFeed.",
+      "rdfs:label": "dateCreated",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Date"
+        },
+        {
+          "@id": "schema:DateTime"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:processingDate",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The date the sample was processed or used in a method.",
+      "rdfs:label": "processingDate",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Date"
+        },
+        {
+          "@id": "schema:DateTime"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:submitter",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The person or organization that registers the sample. ",
+      "rdfs:label": "submitter",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Person"
+        },
+        {
+          "@id": "schema:Organization"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:maintainer",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The Person or Organization who is responsible for the Sample.",
+      "rdfs:label": "maintainer",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Person"
+        },
+        {
+          "@id": "schema:Organization"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:collector",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The Person or Organization who collected the Sample.",
+      "rdfs:label": "collector",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Person"
+        },
+        {
+          "@id": "schema:Organization"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:contributor",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Person or organization that contributes to the work.",
+      "rdfs:label": "contributor",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Person"
+        },
+        {
+          "@id": "schema:Organization"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:contactPoint",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Person or organization that can be contacted for more information or support. ",
+      "rdfs:label": "contactPoint",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Person"
+        },
+        {
+          "@id": "schema:Organization"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:collectionMethod",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Provide information about the conditions and methods of acquisition of samples. ",
+      "rdfs:label": "collectionMethod",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:instrument",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Provide description of instruments and devices used in collecting, processing and analysis of samples.",
+      "rdfs:label": "instrument",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:locationOfOrigin",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The location from which the sample was originally collected.",
+      "rdfs:label": "locationOfOrigin",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:GeoCoordinates"
+        },
+        {
+          "@id": "schema:Place"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:environmentalSystem",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A category or description of the habitat that describes elements of an ecosystem where the sample was collected. Where possible use controlled vocabulary such as ENVO.",
+      "rdfs:label": "environmentalSystem",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:locationCreated",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The place where a sample underwent processing or creation, distinct from its original location.",
+      "rdfs:label": "locationCreated",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:GeoCoordinates"
+        },
+        {
+          "@id": "schema:Place"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:itemLocation",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Current location of the item.",
+      "rdfs:label": "itemLocation",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:GeoCoordinates"
+        },
+        {
+          "@id": "schema:Place"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:sampleQuantity",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A numeric value for a measurement of the size  of a sample.",
+      "rdfs:label": "sampleQuantity",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:QuantitativeValue"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:sampleState",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Specify the composition and state of the sample, indicating which form it exisits in, e.g. gas, liquid, solid.",
+      "rdfs:label": "sampleState",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:sampleType",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Indicate the type of sample",
+      "rdfs:label": "sampleType",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:sampleStorageTemperature",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The temperature at which the sample is stored.",
+      "rdfs:label": "sampleStorageTemperature",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:QualitativeValue"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:sampleProcess",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The processing technique that was applied to the sample, methods used to prepare the samples.",
+      "rdfs:label": "sampleProcess",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:experimentalPurpose",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Describe the planned or executed experimental procedures involving the samples.",
+      "rdfs:label": "experimentalPurpose",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:funding",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Provide funding information.",
+      "rdfs:label": "funding",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Grant"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:project",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Information on the project.",
+      "rdfs:label": "project",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:ResearchProject"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:accessConditions",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Sample access statement outlining conditions/requirements need to be fulfilled before access to the sample is granted.",
+      "rdfs:label": "accessConditions",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:ethics",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Indicate which ethics policies are associated with the sample.",
+      "rdfs:label": "ethics",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:studyTitle",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Title of the study the samples belong to",
+      "rdfs:label": "studyTitle",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:studyID",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Indicate the study ID.",
+      "rdfs:label": "studyID",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:sampleAvailability",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Indicate whether this resource is available for reuse.",
+      "rdfs:label": "sampleAvailability",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Boolean"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:isRelatedTo",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Describe related items including other resources related to the samples.",
+      "rdfs:label": "isRelatedTo",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "mytest:Sample"
+        },
+        {
+          "@id": "schema:CreativeWork"
+        },
+        {
+          "@id": "schema:ImageObject"
+        },
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:hasPart",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Describe related items including other resources related to the samples.",
+      "rdfs:label": "hasPart",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "mytest:Sample"
+        },
+        {
+          "@id": "schema:CreativeWork"
+        },
+        {
+          "@id": "schema:ImageObject"
+        },
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:isPartOf",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Describe related items including other resources related to the samples.",
+      "rdfs:label": "isPartOf",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "mytest:Sample"
+        },
+        {
+          "@id": "schema:CreativeWork"
+        },
+        {
+          "@id": "schema:ImageObject"
+        },
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:citation",
+      "@type": "rdf:Property",
+      "rdfs:comment": "List publications where the sample is mentioned or described.",
+      "rdfs:label": "citation",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:CreativeWork"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:isControl",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Indicates whether the sample is being used as a normal control, may be in combination with another sample.",
+      "rdfs:label": "isControl",
+      "schema:domainIncludes": {"@id": "mytest:Sample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Boolean"
+        }
+      ]
+    }
+  ],
+{
+      "@id": "mytest:BioSample",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A biological material entity that is representative of a whole.\\nComments: Typically samples are intended to be representative of the whole or aspects thereof. Examples of samples include biomedical samples (blood, urine) and plant specimens held at herbaria.\\n\\nVersion: 0.2 \\ncreated by Nick Juty, Sara El-Gebali, Leyla Jael Castro, Helena Schnitzer, Alban Gaignard, Ginger Tsueng, Rita Monteiro and Joana Pauperio. Note, the property `funding` was originally added as `grant`, but was changed to for consistency with schema.org.",
+      "rdfs:label": "BioSample",
+      "schema:additionalType":"https://bioschemas.org/types#nav-draft",
+      "rdfs:subClassOf": [
+          {
+            "@id": "mytest:Sample"
+          },
+          {
+            "@id": "schema:BioChemEntity"
+          }
+      ],
+      "schema:schemaVersion": [
+        "https://schema.org/docs/releases.html#v23.0"
+      ]
+    },
+    {
+      "@id": "mytest:scientificName",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The full scientific name (order, family, subfamily,  genus,specificEpithet).",
+      "rdfs:label": "scientificName",
+      "schema:domainIncludes": {"@id": "mytest:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:DefinedTerm"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:anatomicalSystem",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Indicate the anatomical system from which the sample is collect, e.g. circulatory, digestive, endocrine, immune and other systems.",
+      "rdfs:label": "anatomicalSystem",
+      "schema:domainIncludes": {"@id": "mytest:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:AnatomicalSystem"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:anatomicalStructure",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Indicate the organ, tissues the sample was collected from.",
+      "rdfs:label": "anatomicalStructure",
+      "schema:domainIncludes": {"@id": "mytest:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:AnatomicalStructure"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:sex",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The biological sex of the individual from which the sample was obtained.",
+      "rdfs:label": "sex",
+      "schema:domainIncludes": {"@id": "mytest:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "mytest:developmentalStage",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A temporal subdivision of a developmental process, indicating the age or stage of the object when the sample was created.",
+      "rdfs:label": "developmentalStage",
+      "schema:domainIncludes": {"@id": "mytest:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:QuantitativeValue"
+        },
+        {
+          "@id": "schema:DefinedTerm"
+        }    
+      ]
+    }
+}
